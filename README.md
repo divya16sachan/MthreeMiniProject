@@ -1,3 +1,5 @@
+![Jenkins Build Stages](assets/screenshots/JenkinsBuildStages.png)
+
 # FastAPI Jenkins CI/CD Mini Project — Summary
 
 ## Overview
