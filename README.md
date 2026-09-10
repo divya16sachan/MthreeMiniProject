@@ -120,10 +120,3 @@ Finished: SUCCESS
 | Container | Externalized env config | Docker `-e` option |
 | Pipeline | Checkout / Install / Test / Build / Tag / Health Check | Jenkins pipeline stages |
 | Documentation | New user can run & verify project | Follow README |
-
-## ⚠️ Important Caveats
-1. **README alone doesn't satisfy the requirement** that "required branches, a resolved conflict, and a reviewed pull request are visible." These must actually exist in the **GitHub repository's history/PRs** — not just be described in documentation.
-2. **Externalized environment configuration** requires the `api.py` code to **actually read** the environment variable at runtime. Simply passing `-e APP_ENV=development` in the Docker run command is **not sufficient** on its own — the application code must consume it.
-
----
-*Note: If you'd like, your actual `api.py`, `Dockerfile`, `Jenkinsfile`, and `api_test.py` can be reviewed against this rubric to confirm these two caveats are properly addressed in code — just share the files.*
