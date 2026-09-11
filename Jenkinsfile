@@ -47,6 +47,8 @@ pipeline {
         stage('Health Check') {
             steps {
                 sh '''
+                    docker rm -f fastapi-test 2>/dev/null || true
+
                     docker run -d \
                     --name fastapi-test \
                     -p 8000:8000 \
